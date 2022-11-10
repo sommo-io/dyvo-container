@@ -13,10 +13,4 @@ then
     service ssh start
 fi
 
-# if [[ $JUPYTER_PASSWORD ]]
-# then
-#     cd /
-#     jupyter lab --allow-root --no-browser --port=8888 --ip=* --ServerApp.terminado_settings='{"shell_command":["/bin/bash"]}' --ServerApp.token=$JUPYTER_PASSWORD --ServerApp.allow_origin=* --ServerApp.preferred_dir=/workspace
-# else
-#     sleep infinity
-# fi
+# bash -c "cd workspace; git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup; cd dyvo-sd-setup; sh start.sh; sleep infinity"
