@@ -56,7 +56,7 @@ RUN python -m pip install kornia==0.6.7
 RUN python -m pip install lark==1.1.2
 RUN python -m pip install inflection==0.5.1
 RUN python -m pip install GitPython==3.1.27
-RUN python -m pip torch-fidelity==0.3.0
+RUN python -m pip install torch-fidelity==0.3.0
 
 ADD start.sh /
 RUN chmod +x /start.sh
