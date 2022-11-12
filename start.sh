@@ -21,5 +21,5 @@ git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup
 cd dyvo-sd-setup
 bash -l start.sh
 
-sleepinfinitely
+bash -c "sleep 300"
 # bash -c "cd workspace; git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup; cd dyvo-sd-setup; sh start.sh; sleep infinity"

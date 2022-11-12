@@ -26,11 +26,10 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/
 
 ADD env-automatic.yaml /
 ADD env-ldm.yaml /
-RUN conda env create --file ./env-ldm.yaml
-RUN conda env create --file ./env-automatic.yaml
-
-RUN conda create --name ldm python=3.8.10
-RUN conda create --name automatic python=3.10.6
+RUN conda update -n base -c defaults conda && \
+    conda env create -f env-ldm.yaml && \
+    conda env create -f env-automatic.yaml && \
+    conda clean --all --yes
 
 ADD start.sh /
 RUN chmod +x /start.sh
