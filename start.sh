@@ -19,7 +19,10 @@ fi
 cd workspace
 git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup
 cd dyvo-sd-setup
+export DB_DIR=$(pwd)/dyvo-sd
+export PIP_CACHE_DIR=$(pwd)/pip_cache
+export TRANSFORMERS_CACHE=$(pwd)/transformers-cache
 bash -l start.sh
 
-bash -c "sleep 300"
+bash -c "sleep inf"
 # bash -c "cd workspace; git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup; cd dyvo-sd-setup; sh start.sh; sleep infinity"

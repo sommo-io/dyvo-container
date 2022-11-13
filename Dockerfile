@@ -26,10 +26,10 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/
 
 ADD env-automatic.yaml /
 ADD env-ldm.yaml /
-RUN conda update -n base -c defaults conda && \
-    conda env create -f env-ldm.yaml && \
-    conda env create -f env-automatic.yaml && \
-    conda clean --all --yes
+RUN conda update -n base -c defaults conda
+RUN conda env create -f env-automatic.yaml
+RUN conda env create -f env-ldm.yaml
+RUN conda clean --all --yes
 
 ADD start.sh /
 RUN chmod +x /start.sh

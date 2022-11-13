@@ -7,35 +7,38 @@ dependencies:
   - pip=22.2.2
   - cudatoolkit=11.3
   - pytorch=1.12.1
-  - torchvision=0.13.1
   - numpy=1.23.1
   - pip:
-    - basicsr
-    - diffusers
-    - fairscale==0.4.4
+    - https://download.pytorch.org/whl/cu113/torch-1.12.1%2Bcu113-cp310-cp310-linux_x86_64.whl
+    - https://download.pytorch.org/whl/cu113/torchvision-0.13.1%2Bcu113-cp310-cp310-linux_x86_64.whl
+    - basicsr==1.4.2
+    - diffusers==0.3.0
+    - fairscale==0.4.9
     - fonts
     - font-roboto
-    - gfpgan
+    - gfpgan==1.3.8
     - gradio==3.9
     - invisible-watermark
-    - numpy
-    - omegaconf
+    - numpy==1.23.3
+    - omegaconf==2.2.3
     - opencv-python
     - requests
-    - piexif
-    - Pillow
-    - pytorch_lightning==1.7.7
+    - piexif==1.1.3
+    - Pillow==9.2.0
+    - pytorch-lightning==1.7.7
     - realesrgan
-    - scikit-image>=0.19
-    - timm==0.4.12
+    - scikit-image==0.19.2
+    - timm==0.6.7
     - transformers==4.19.2
-    - torch
-    - einops
-    - jsonmerge
-    - clean-fid
-    - resize-right
-    - torchdiffeq
-    - kornia
-    - lark
-    - inflection
-    - GitPython
+    - einops==0.4.1
+    - jsonmerge==1.8.0
+    - clean-fid==0.1.29
+    - resize-right==0.0.2
+    - torchdiffeq==0.2.3
+    - kornia==0.6.7
+    - lark==1.1.2
+    - inflection==0.5.1
+    - GitPython==3.1.27
+variables:
+  MY_VAR: something
+  OTHER_VAR: ohhhhya
