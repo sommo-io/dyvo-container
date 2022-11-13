@@ -25,12 +25,17 @@ RUN apt-get update --yes && \
 RUN apt-key del 7fa2af80
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
 
-ADD env-automatic.yaml /
-ADD env-ldm.yaml /
 RUN conda update -n base -c defaults conda
-RUN conda env create -f env-ldm.yaml
+
+ADD env-automatic.yaml /
 RUN conda env create -f env-automatic.yaml
+
+ADD env-ldm.yaml /
+RUN conda env create -f env-ldm.yaml
+
 RUN conda clean --all --yes
+
+ADD v1-5-pruned-emaonly.ckpt /models/
 
 ADD start.sh /
 RUN chmod +x /start.sh

@@ -20,6 +20,7 @@ dependencies:
     - test-tube>=0.7.5
     - streamlit>=0.73.1
     - einops==0.4.1
+    - pillow==9.0.1
     - torch-fidelity==0.3.0
     - transformers==4.18.0
     - torchmetrics==0.6.0
