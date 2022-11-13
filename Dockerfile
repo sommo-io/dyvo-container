@@ -13,6 +13,7 @@ RUN apt-get update --yes && \
     curl \
     nano \
     jq \
+    moreutils \
     gnupg2 \
     ffmpeg \
     libsm6 \
@@ -27,8 +28,8 @@ RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/
 ADD env-automatic.yaml /
 ADD env-ldm.yaml /
 RUN conda update -n base -c defaults conda
-RUN conda env create -f env-automatic.yaml
 RUN conda env create -f env-ldm.yaml
+RUN conda env create -f env-automatic.yaml
 RUN conda clean --all --yes
 
 ADD start.sh /

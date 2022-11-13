@@ -10,8 +10,6 @@ dependencies:
   - torchvision=0.11.3
   - numpy=1.22.3
   - pip:
-    - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
-    - -e git+https://github.com/openai/CLIP.git#egg=clip
     - albumentations==1.1.0
     - opencv-python==4.2.0.34
     - pudb==2019.2
@@ -27,3 +25,5 @@ dependencies:
     - torchmetrics==0.6.0
     - captionizer==1.0.1
     - kornia==0.6
+    - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+    - -e git+https://github.com/openai/CLIP.git#egg=clip
