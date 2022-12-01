@@ -30,12 +30,10 @@ RUN conda update -n base -c defaults conda
 ADD env-automatic.yaml /
 RUN conda env create -f env-automatic.yaml
 
-ADD env-ldm.yaml /
-RUN conda env create -f env-ldm.yaml
+ADD env-dreambooth.yaml /
+RUN conda env create -f env-dreambooth.yaml
 
 RUN conda clean --all --yes
-
-ADD v1-5-pruned-emaonly.ckpt /models/
 
 ADD start.sh /
 RUN chmod +x /start.sh

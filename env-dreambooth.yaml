@@ -1,0 +1,20 @@
+name: dreambooth
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.7
+  - pytorch=1.12.0
+  - pip=21.2.2
+  - pip:
+    - https://github.com/metrolobo/xformers_wheels/releases/download/1d31a3ac_various_6/xformers-0.0.14.dev0-cp37-cp37m-linux_x86_64.whl
+    - git+https://github.com/ShivamShrirao/diffusers
+    - Pillow
+    - accelerate==0.12.0 
+    - transformers 
+    - ftfy 
+    - bitsandbytes 
+    - gradio 
+    - natsort
+    - triton==2.0.0.dev20221120
+    - torchvision==0.13.0
