@@ -23,7 +23,7 @@ git pull
 export DB_DIR=$(pwd)/dyvo-sd
 export PIP_CACHE_DIR=$(pwd)/pip_cache
 export TRANSFORMERS_CACHE=$(pwd)/transformers-cache
-export HF_DATASETS_CACHE=$(pwd)/huggingface-cache
+export HF_HOME=$(pwd)/huggingface-cache
 bash -l start.sh
 
 bash -c "sleep inf"
