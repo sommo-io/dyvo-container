@@ -17,7 +17,7 @@ then
 fi
 
 cd workspace
-git clone https://$GH_ACCESS_TOKEN@github.com/No-Code-No-Problem/dyvo-sd-setup
+git clone https://$GH_ACCESS_TOKEN@github.com/sommo-io/dyvo-sd-setup
 cd dyvo-sd-setup
 git pull
 export DB_DIR=$(pwd)/dyvo-sd
